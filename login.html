@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Baumans|Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="auth.css">
+    <title>MegaBikes</title>
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <a href="index.html">MegaBikes</a>
+        </div>
+        <div id="content">
+            <div id="total-box-l">
+                <div id="left-box">
+                    <div id="info-l">
+                        <h1>Ainda sem conta?</h1>
+                        <a class="left-box-button" href="register.html">Cadastrar-se</a>
+                    </div>
+                    <div id="result">
+                        <h2 id="positiveAnswer"></h2>
+                    </div>
+                </div>
+                <div id="main-box">
+                    <h1>Acessar MegaBikes</h1>
+                    <div id="provider">
+                         <div id="facebook-provider">
+                            <button class="circle-button">
+                                <img class="circle-icon" src="imagens/facebook.png" id="img">
+                            </button>
+                        </div>
+                        <div id="google-provider">
+                            <button class="circle-button">
+                                <img class="circle-icon" src="imagens/google.png" id="img">
+                            </button>
+                        </div>
+                        <div id="microsoft-provider">
+                            <button class="circle-button">
+                                <img class="circle-icon" src="imagens/microsoft.png" id="img">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="divider">
+                        <h4>Ou use suas credenciais</h4>
+                    </div>
+                    <div id="form">
+                        <div id="input">
+                            <input id="email" class="input-field" name="email" placeholder="Email" type="text"/>
+                            <h4 id="textEmail"></h4>
+                        </div>
+                        <div id="input">
+                            <input id="senha" class="input-field" name="password" placeholder="Senha" type="password"/>
+                            <h4 id="textSenha"></h4>
+                        </div>
+                        <div id="submit-button">
+                            <button onClick="valLogin()">ENTRAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="javascript.js"></script>
+</body>
+</html>

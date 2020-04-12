@@ -1,0 +1,360 @@
+:root {
+    --primaryColor: rgb(248, 157, 71);
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+}
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 33px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Nav Bar */
+.navbar {
+    position: sticky ;
+    top: 0;
+    left: 0;
+    background: var(--primaryColor);
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    align-content: center; 
+    z-index: 1;  
+
+}
+
+.navbar-cont{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 1.5rem;  
+    font-size: 1.5em;  
+}
+
+.navbar-cont #logo {
+    color: var(--mainWhite);
+    font-family: 'Baumans', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#search-field {
+    padding: 1.1em;
+    outline: none;
+    background: var(--mainWhite);
+    border-radius: 20px;
+    border: 1px solid var(--mainWhite);
+    width: 400px;
+    height: 15px;
+}
+
+   
+.cart-btn {
+    position: relative;
+    /* display: inline; */
+    cursor: pointer;
+    color: var(--mainWhite);
+    
+}
+
+.nav-card{
+    display: inline;
+}
+
+.cart-items {
+    display: inline;
+    position: relative;
+    /* top: -10px;
+    right: -15px; */
+    background: transparent;
+    padding: 0 5px;
+    border-radius: 30%;
+    color: var(--mainWhite);
+  }
+/* Nav bar */
+
+#wellcomeImage {
+    min-height: calc(100vh - 80px);
+    background: url(imagens/wellcomeImage.jpg);
+    background-position-x: 60%;
+    background-position-y: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner{
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 2rem;
+}
+#ola{
+    font-weight: 100px;
+    line-height: 50px;
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    color: var(--mainBlack  );
+    font-size: 3.4rem;
+    /* text-transform: uppercase; */
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 3rem;
+}
+
+.banner-btn{
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1em;
+    background: var(--mainWhite);
+    border: 1px solid var(--primaryColor);
+    color: var(--mainBlack);
+    border-radius: 20px;
+    transition: var(--mainTransition);
+    cursor: pointer;
+    font-style: bold;
+}
+
+.banner-btn:hover{
+    background: var(--primaryColor);
+    color: var(--mainWhite);
+}
+
+.btn{
+    padding: 0 0.8em;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    border-radius: 66px;
+    border: 2px solid var(--mainWhite);
+    background: var(--primaryColor);
+    color: var(--mainWhite);
+}
+.btn:hover{
+    
+    background: var(--mainWhite);
+    color: var(--primaryColor);
+}
+/* End banner */
+/* Produtos */
+.produtos{
+    padding: 0.4rem;
+}
+
+.titulo h2{
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 5rem;
+    text-transform: capitalize;
+    transition: var(--mainTransition);
+}
+
+.central-produtos{
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 1.5em;
+    grid-row-gap: 2rem;
+}
+
+.img-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.img-produto{
+    width: 100%;
+    min-height: 12em;
+    display: block;
+    transition: var(--mainTransition);
+    
+}
+
+.img-container:hover .btn-add{
+    transform: translateX(0%)
+}
+
+.btn-add{
+    position: absolute;
+    top: 70%;
+    right: 0;
+    background: var(--primaryColor);
+    border: none;
+    padding: 0.5em;
+    font-style: bold;
+    font-size: 1em;
+    transform: translateX(101%);
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: var(--mainSpacing);
+}
+
+.btn-add:hover{
+    color: var(--mainWhite);
+}
+
+.img-container:hover .img-produto{
+    opacity: 0.5;
+}
+
+.produto h3{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    letter-spacing: var(--mainSpacing);
+}
+
+.produto{
+    border: 1px solid var(--mainGrey);
+    box-shadow: var(--mainBlack);
+
+}
+
+/* End produtos */
+/* ----- Cart --------- */
+.cart-geral{
+    position: fixed;
+    top: 0;
+    right: o;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: var(--mainGrey);
+    transition: var(--mainTransition);
+    /* visibility: hidden; */
+}
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 3;
+    background: var(--mainWhite);
+    padding: 1.3em;
+    transition: var(--mainTransition);
+    /* transform: translateX(100%); */
+}
+
+.showCart {
+    transform: translateX(0);
+}
+
+  .transparentBcg {
+    visibility: visible;
+}
+
+.close-cart {
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.cart h2{
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.showCart {
+    transform: translateX(0);
+  }
+.transparentBcg {
+    visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+    .cart {
+      width: 30vw;
+      min-width: 450px;
+    }
+}
+  
+.close-cart {
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+/* Item */
+
+.cart-item{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 1.5em;
+    margin: 1.5rem 0;
+    border: 1px solid var(--mainBlack);
+    padding:  0.2em 0.5em;
+}
+
+.cart-item img{
+    width: 75px;
+    height: 75px;
+}
+
+.cart-item h4{
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--primaryColor);
+    letter-spacing: var(--mainSpacing);
+    margin: 0.85em 0;
+}
+
+.cart-item h5{
+    letter-spacing: var(--mainSpacing);
+    margin: 0.5em 0;
+}
+
+.quant-item {
+    text-align: center;
+}
+
+.fa-chevron-up, .fa-chevron-down{
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+
+.fa-trash-alt{
+    cursor: pointer;
+    margin: 0.5em 0;
+}
+
+.edit{
+    display: block;
+}
+
+/* Finalizado Item */
+
+.cart-footer{
+    margin-top: 2.2em;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+
+}
+
+.cart-footer h3{
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+/* Footer do Card */
+

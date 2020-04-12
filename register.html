@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="auth.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Kreon&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baumans|Ubuntu&display=swap" rel="stylesheet">
+        <title>MegaBikes</title>
+    </head>
+    <body>
+        <div id="container">
+        <div id="navbar">
+            <a href="index.html">MegaBikes</a>
+        </div>
+        <div id="content">
+            <div id="total-box-r">
+                <div id="left-box">
+                    <div id="info-r">
+                        <h1>Já tem conta?</h1>
+                        <a class="left-box-button" href="login.html">Acessar MegaBikes</a>
+                    </div>
+                    <div id="result">
+                        <h2 id="positiveAnswer"></h2>
+                    </div>
+                </div>
+                <div id="main-box">
+                    <h1>Criar Conta</h1>
+                    <div id="form">
+                        <div id="input">
+                            <input id="nome" class="input-field" name="nome" placeholder="Nome" type="text"/>
+                            <h4 id="textNome"></h4>
+                        </div>
+                        <div id="input">
+                            <input id="cpf" class="input-field" name="cpf" placeholder="CPF" type="text"/>
+                            <h4 id="textCpf"></h4>
+                        </div>
+                        <div id="input">
+                            <input id="tel" class="input-field" name="tel" placeholder="Telefone" type="text"/>
+                            <h4 id="textTel"></h4>
+                        </div>
+                        <div id="input">
+                            <input id="end" class="input-field" name="end" placeholder="Endereço" type="text"/>
+                            <h4 id="textEnd"></h4>
+                        </div>
+                        <div id="input">
+                            <input id="email" class="input-field" name="email" placeholder="Email" type="text"/>
+                            <h4 id="textEmail"></h4>
+                        </div>
+                        <div id="input">
+                            <input id="senha" class="input-field" name="password" placeholder="Senha" type="password"/>
+                            <h4 id="textSenha"></h4>
+                        </div>
+                        <div id="submit-button">
+                            <button onClick="validar()">CADASTRAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+    </body>
+</html>
